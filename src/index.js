@@ -11,7 +11,7 @@ function findURLsFromText(text)
     });
     
     Domains.list.some(function(domain) {
-        const matchRegex = new RegExp(`[-\\w가-힣+&@#\/%=~_|$?!:,.]+${domain}(/[-\\w가-힣+&@#\/%=~_|$?!:,.]+)?(:(0|6[0-5][0-5][0-3][0-5]|[1-5][0-9][0-9][0-9][0-9]|[1-9][0-9]{0,3}))?\\b`, 'g');
+        const matchRegex = new RegExp(`[-\\w가-힣+&@#\/%=~_|$?!:,.]+${domain}(:(0|6[0-5][0-5][0-3][0-5]|[1-5][0-9][0-9][0-9][0-9]|[1-9][0-9]{0,3}))?(/[-\\w가-힣+&@#\/%=~_|$?!:,.]+)?\\b`, 'g');
         if (text.includes(domain))
         {
             text = text.replace(matchRegex, function(URL) {
