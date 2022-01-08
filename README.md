@@ -11,7 +11,9 @@ console.log(`Original Text:\n${text}`);
 // Four. xqing.tech:65535
 // Five. xqing.tech:65536
 
-console.log(findURLsFromText(text));
+const urlsArray = findURLsFromText(text);
+
+console.log(urlsArray);
 // [
 //     'http://localhost:8080',
 //     'http://www.naver.com?t=1641096928',
